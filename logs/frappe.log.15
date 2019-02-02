@@ -1,0 +1,346 @@
+[ERROR] 2019-01-03 13:35:36,002 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member Registration\",\"name\":\"New Member Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"gender\":\"male\",\"marrital_status\":\"Married\",\"first_name\":\"Jessy\",\"last_name\":\"K\",\"address\":\"chhdd\",\"date_of_birth\":\"1990-08-22\",\"branch\":\"Sub Headquater\",\"date_of_salvation\":\"2019-01-01\",\"membership_date\":\"2019-01-01\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/doctype/member_registration/member_registration.py", line 13, in validate
+    member = frappe.db.sql("""select first_name from `tabRegistered Children` where docstatus = 1 %s""")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/database/database.py", line 165, in sql
+    self._cursor.execute(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1054, u"Unknown column 'first_name' in 'field list'")
+[ERROR] 2019-01-03 13:35:36,310 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:35:36.048608-127.0.0.1-83f
+[ERROR] 2019-01-03 13:36:23,676 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member Registration\",\"name\":\"New Member Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"gender\":\"male\",\"marrital_status\":\"Married\",\"first_name\":\"Jessy\",\"last_name\":\"K\",\"address\":\"chhdd\",\"date_of_birth\":\"1990-08-22\",\"branch\":\"Sub Headquater\",\"date_of_salvation\":\"2019-01-01\",\"membership_date\":\"2019-01-01\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/doctype/member_registration/member_registration.py", line 13, in validate
+    member = frappe.db.sql("""select name1 from `tabRegistered Children` where docstatus = 1 %s""")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/database/database.py", line 165, in sql
+    self._cursor.execute(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1054, u"Unknown column 's' in 'where clause'")
+[ERROR] 2019-01-03 13:36:24,075 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:36:23.681983-127.0.0.1-f7d
+[ERROR] 2019-01-03 13:36:54,986 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member Registration\",\"name\":\"New Member Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"gender\":\"male\",\"marrital_status\":\"Married\",\"first_name\":\"Jessy\",\"last_name\":\"K\",\"address\":\"chhdd\",\"date_of_birth\":\"1990-08-22\",\"branch\":\"Sub Headquater\",\"date_of_salvation\":\"2019-01-01\",\"membership_date\":\"2019-01-01\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/doctype/member_registration/member_registration.py", line 14, in validate
+    frappe.msgprint(_(member))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-03 13:36:55,258 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:36:54.988346-127.0.0.1-419
+[ERROR] 2019-01-03 13:37:46,422 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member Registration\",\"name\":\"New Member Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"gender\":\"male\",\"marrital_status\":\"Married\",\"first_name\":\"Jessy\",\"last_name\":\"K\",\"address\":\"chhdd\",\"date_of_birth\":\"1990-08-22\",\"branch\":\"Sub Headquater\",\"date_of_salvation\":\"2019-01-01\",\"membership_date\":\"2019-01-01\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/doctype/member_registration/member_registration.py", line 14, in validate
+    frappe.msgprint(_(member))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-03 13:37:46,687 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:37:46.424036-127.0.0.1-c0a
+[ERROR] 2019-01-03 13:38:53,374 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member Registration\",\"name\":\"New Member Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"gender\":\"male\",\"marrital_status\":\"Married\",\"first_name\":\"Jessy\",\"last_name\":\"K\",\"address\":\"chhdd\",\"date_of_birth\":\"1990-08-22\",\"branch\":\"Sub Headquater\",\"date_of_salvation\":\"2019-01-01\",\"membership_date\":\"2019-01-01\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/doctype/member_registration/member_registration.py", line 14, in validate
+    frappe.msgprint(_(member))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-03 13:38:54,049 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:38:53.376980-127.0.0.1-51b
+[ERROR] 2019-01-03 13:41:58,181 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member Registration\",\"name\":\"New Member Registration 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"gender\":\"male\",\"marrital_status\":\"Married\",\"first_name\":\"Jessy\",\"last_name\":\"g\",\"address\":\"jdjd\",\"date_of_birth\":\"1990-08-23\",\"branch\":\"Sub Headquater\",\"date_of_salvation\":\"2019-01-01\",\"membership_date\":\"2019-01-01\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/doctype/member_registration/member_registration.py", line 14, in validate
+    frappe.msgprint(_(member))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-03 13:41:58,447 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:41:58.183179-127.0.0.1-bcb
+[ERROR] 2019-01-03 13:42:40,216 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member Registration\",\"name\":\"New Member Registration 2\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"gender\":\"male\",\"marrital_status\":\"Married\",\"first_name\":\"Jessy\",\"last_name\":\"g\",\"address\":\"jdjd\",\"date_of_birth\":\"1990-08-23\",\"branch\":\"Sub Headquater\",\"date_of_salvation\":\"2019-01-01\",\"membership_date\":\"2019-01-01\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/doctype/member_registration/member_registration.py", line 15, in validate
+    frappe.throw(_(member))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-03 13:42:40,477 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:42:40.218721-127.0.0.1-850

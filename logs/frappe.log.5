@@ -1,0 +1,1550 @@
+[DEBUG] 2019-01-12 14:37:26,109 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:38:26,395 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:39:26,553 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:40:26,839 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:41:27,017 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:42:27,178 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:43:27,344 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:44:27,564 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:45:27,726 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:46:27,899 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:47:28,059 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:48:28,296 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:49:28,494 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:50:28,670 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 14:51:19,022 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nhj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 18, in validate
+    self.pastorate()
+TypeError: 'NoneType' object is not callable
+[ERROR] 2019-01-12 14:51:19,343 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 14:51:19.026093-127.0.0.1-b0c
+[DEBUG] 2019-01-12 14:51:28,839 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 14:51:39,735 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nhj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00002\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 18, in validate
+    self.pastorate()
+TypeError: 'NoneType' object is not callable
+[ERROR] 2019-01-12 14:51:39,751 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 14:51:39.737267-127.0.0.1-846
+[DEBUG] 2019-01-12 14:52:29,092 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:53:29,241 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 14:53:53,856 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nhj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00002\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 18, in validate
+    self.pastorate()
+TypeError: 'NoneType' object is not callable
+[ERROR] 2019-01-12 14:53:53,869 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 14:53:53.857642-127.0.0.1-170
+[DEBUG] 2019-01-12 14:54:29,412 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 14:55:27,552 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nhj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00002\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 18, in validate
+    self.pastorate(self.sub_headquater)
+TypeError: 'NoneType' object is not callable
+[ERROR] 2019-01-12 14:55:27,812 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 14:55:27.553995-127.0.0.1-6ac
+[DEBUG] 2019-01-12 14:55:29,612 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:56:29,872 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 14:56:31,004 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nhj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00002\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 18, in validate
+    self.validate_pastorate(self.sub_headquater)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 26, in validate_pastorate
+    pastorate = frappe.db.sql("""select * from `tabPastorate` where sub_headquaters_name = %s""",(self.sub_headquater))
+NameError: global name 'frappe' is not defined
+[ERROR] 2019-01-12 14:56:31,270 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 14:56:31.006415-127.0.0.1-424
+[DEBUG] 2019-01-12 14:57:30,047 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 14:57:43,959 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nhj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00002\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 12, in savedocs
+    doc = frappe.get_doc(json.loads(doc))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 715, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 66, in get_doc
+    controller = get_controller(doctype)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/base_document.py", line 36, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/modules/utils.py", line 186, in load_doctype_module
+    raise ImportError('Module import failed for {0} ({1})'.format(doctype, module_name + ' Error: ' + str(e)))
+ImportError: Module import failed for Member (erpnext.non_profit.doctype.member.member Error: No module named frapee)
+[ERROR] 2019-01-12 14:57:45,351 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 14:57:43.970172-127.0.0.1-6b1
+[DEBUG] 2019-01-12 14:58:30,237 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 14:59:30,395 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 14:59:35,996 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nhj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00002\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate(self.sub_headquater)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 28, in validate_pastorate
+    pastorate = frappe.db.sql("""select * from `tabPastorate` where sub_headquaters_name = %s""",(self.sub_headquater))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/database/database.py", line 154, in sql
+    self._cursor.execute(query, values)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+ProgrammingError: (1146, u"Table 'site.tabPastorate' doesn't exist")
+[ERROR] 2019-01-12 14:59:36,285 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 14:59:35.998547-127.0.0.1-d10
+[DEBUG] 2019-01-12 15:00:30,690 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 15:01:12,657 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nhj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00002\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate(self.sub_headquater)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 29, in validate_pastorate
+    frappe.msgprint(pastorate)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 330, in msgprint
+    message_log.append(json.dumps(out))
+  File "/usr/lib/python2.7/json/__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python2.7/json/encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python2.7/json/encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: datetime.datetime(2019, 1, 12, 12, 41, 9, 660613) is not JSON serializable
+[ERROR] 2019-01-12 15:01:13,345 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 15:01:12.658843-127.0.0.1-33a
+[DEBUG] 2019-01-12 15:01:30,849 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 15:02:27,776 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nhj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00002\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate(self.sub_headquater)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 29, in validate_pastorate
+    frappe.msgprint(_(pastorate))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-12 15:02:28,040 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 15:02:27.777824-127.0.0.1-124
+[DEBUG] 2019-01-12 15:02:31,008 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:03:31,161 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:04:31,386 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 15:04:54,390 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nhj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00002\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate(self.sub_headquater)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 29, in validate_pastorate
+    frappe.msgprint(pastorate)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 330, in msgprint
+    message_log.append(json.dumps(out))
+  File "/usr/lib/python2.7/json/__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python2.7/json/encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python2.7/json/encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: datetime.datetime(2019, 1, 12, 12, 41, 9, 660613) is not JSON serializable
+[ERROR] 2019-01-12 15:04:54,777 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 15:04:54.393934-127.0.0.1-18a
+[DEBUG] 2019-01-12 15:05:31,541 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:06:31,697 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:07:31,888 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:08:32,166 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:09:32,352 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:10:32,541 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:11:32,696 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:12:32,924 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:13:33,111 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:14:33,288 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:15:33,468 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:16:33,654 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:17:33,824 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:18:33,989 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:19:34,203 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:20:34,408 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:21:34,576 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:22:34,755 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:23:34,905 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 15:24:24,906 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate()
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 28, in validate_pastorate
+    pastorate = frappe.db.sql("""select * from `tabPastorates` where sub_headquaters_name = %s"""(self.sub_headquater), as_dict=1)
+TypeError: 'unicode' object is not callable
+[ERROR] 2019-01-12 15:24:25,181 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 15:24:24.909541-127.0.0.1-1c3
+[DEBUG] 2019-01-12 15:24:35,115 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:25:35,286 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:26:35,445 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:27:35,623 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 15:28:06,848 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate()
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 29, in validate_pastorate
+    frappe.msgprint(pastorate)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 330, in msgprint
+    message_log.append(json.dumps(out))
+  File "/usr/lib/python2.7/json/__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python2.7/json/encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python2.7/json/encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: datetime.datetime(2019, 1, 12, 12, 36, 10, 381241) is not JSON serializable
+[ERROR] 2019-01-12 15:28:07,493 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 15:28:06.850596-127.0.0.1-943
+[DEBUG] 2019-01-12 15:28:35,865 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 15:29:27,409 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate()
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 28, in validate_pastorate
+    pastorate = frappe.db.sql("""select * from `tabPastorates` where sub_headquaters_name = %s"""(self.sub_headquater), as_list=True)
+TypeError: 'unicode' object is not callable
+[ERROR] 2019-01-12 15:29:28,142 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 15:29:27.414034-127.0.0.1-bad
+[DEBUG] 2019-01-12 15:29:36,036 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 15:30:00,603 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate()
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 29, in validate_pastorate
+    frappe.msgprint(pastorate)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 330, in msgprint
+    message_log.append(json.dumps(out))
+  File "/usr/lib/python2.7/json/__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python2.7/json/encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python2.7/json/encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: datetime.datetime(2019, 1, 12, 12, 36, 10, 381241) is not JSON serializable
+[ERROR] 2019-01-12 15:30:00,875 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 15:30:00.611326-127.0.0.1-02b
+[DEBUG] 2019-01-12 15:30:36,203 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:31:36,386 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:32:36,635 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:33:36,822 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:34:37,006 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:35:37,211 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:36:37,423 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:37:37,584 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:38:37,772 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:39:37,944 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:40:38,173 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:41:38,367 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 15:42:05,417 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate(self.sub_headquater)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 30, in validate_pastorate
+    past = frappe.get_list("Pastorates", sub_headquaters_name=sub_headquater)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1241, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(None, *args, **kwargs)
+TypeError: execute() got an unexpected keyword argument 'sub_headquaters_name'
+[ERROR] 2019-01-12 15:42:05,988 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 15:42:05.419438-127.0.0.1-d0e
+[DEBUG] 2019-01-12 15:42:38,556 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 15:42:46,957 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate(self.sub_headquater)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 30, in validate_pastorate
+    past = frappe.get_list("Pastorates", sub_headquater)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1241, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(None, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/db_query.py", line 93, in execute
+    result = self.build_and_run()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/db_query.py", line 118, in build_and_run
+    return frappe.db.sql(query, as_dict=not self.as_list, debug=self.debug, update=self.update)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/database/database.py", line 165, in sql
+    self._cursor.execute(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1054, u"Unknown column 'SUB' in 'field list'")
+[ERROR] 2019-01-12 15:42:47,629 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 15:42:46.960906-127.0.0.1-347
+[DEBUG] 2019-01-12 15:43:38,749 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 15:44:18,039 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate(self.sub_headquater)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 30, in validate_pastorate
+    past = frappe.get_list("Pastorates", sub_headquaters_name)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1241, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(None, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/db_query.py", line 93, in execute
+    result = self.build_and_run()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/db_query.py", line 118, in build_and_run
+    return frappe.db.sql(query, as_dict=not self.as_list, debug=self.debug, update=self.update)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/database/database.py", line 165, in sql
+    self._cursor.execute(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1054, u"Unknown column 'SUB' in 'field list'")
+[ERROR] 2019-01-12 15:44:18,308 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 15:44:18.041807-127.0.0.1-627
+[DEBUG] 2019-01-12 15:44:38,967 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:45:39,145 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:46:39,308 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:47:39,477 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:48:39,694 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:49:39,880 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:50:40,035 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:51:40,165 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:52:40,360 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:53:40,512 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:54:40,657 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:55:40,826 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:56:41,050 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:57:41,206 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:58:41,379 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 15:59:41,546 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:00:41,855 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:01:42,004 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:02:42,157 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:03:42,338 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:04:42,592 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:05:42,731 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:06:42,854 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:07:43,045 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:08:43,238 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:09:43,396 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:10:43,545 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:11:43,709 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:12:43,901 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:13:44,068 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:14:44,199 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:15:44,347 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:16:44,593 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:17:44,745 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 16:17:47,046 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate()
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 28, in validate_pastorate
+    pastorate = frappe.db.sql("""select * from `tabPastorates` where sub_headquaters_name = SUB-HEAD-00001""")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/database/database.py", line 165, in sql
+    self._cursor.execute(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1054, u"Unknown column 'SUB' in 'where clause'")
+[ERROR] 2019-01-12 16:17:47,346 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 16:17:47.048977-127.0.0.1-a1c
+[DEBUG] 2019-01-12 16:18:44,877 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 16:18:55,682 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 12, in savedocs
+    doc = frappe.get_doc(json.loads(doc))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 715, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 66, in get_doc
+    controller = get_controller(doctype)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/base_document.py", line 36, in get_controller
+    module = load_doctype_module(doctype, module_name)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/modules/utils.py", line 184, in load_doctype_module
+    doctype_python_modules[key] = frappe.get_module(module_name)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 789, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 28
+    pastorate = frappe.db.sql("""select * from `tabPastorates` where sub_headquaters_name = "SUB-HEAD-00001"""")
+                                                                                                               ^
+SyntaxError: EOL while scanning string literal
+[ERROR] 2019-01-12 16:18:55,969 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 16:18:55.684583-127.0.0.1-10f
+[ERROR] 2019-01-12 16:19:33,562 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate()
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 28, in validate_pastorate
+    pastorate = frappe.db.sql("""select * from `tabPastorates` where sub_headquaters_name = "SUB-HEAD-00001""")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/database/database.py", line 165, in sql
+    self._cursor.execute(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+ProgrammingError: (1064, u'You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near \'"SUB-HEAD-00001\' at line 1')
+[ERROR] 2019-01-12 16:19:33,874 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 16:19:33.565534-127.0.0.1-e09
+[DEBUG] 2019-01-12 16:19:45,033 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:20:45,230 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 16:20:53,806 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate()
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 28, in validate_pastorate
+    pastorate = frappe.db.sql("""select * from `tabPastorates` where sub_headquaters_name = `\SUB-HEAD-0000\`""")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/database/database.py", line 165, in sql
+    self._cursor.execute(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1054, u"Unknown column '\\SUB-HEAD-0000\\' in 'where clause'")
+[ERROR] 2019-01-12 16:20:54,499 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 16:20:53.809284-127.0.0.1-9be
+[ERROR] 2019-01-12 16:21:27,285 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"nj\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\",\"sub_headquater\":\"SUB-HEAD-00001\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate()
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 30, in validate_pastorate
+    frappe.msgprint(past)
+NameError: global name 'past' is not defined
+[ERROR] 2019-01-12 16:21:27,921 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 16:21:27.288067-127.0.0.1-d70
+[DEBUG] 2019-01-12 16:21:45,515 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:22:45,713 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:23:45,913 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:24:46,126 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-12 16:25:27,114 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member\",\"name\":\"New Member 3\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"naming_series\":\"NPO-MEM-.YYYY.-\",\"member_name\":\"mkmk\",\"membership_type\":\"Doner\",\"email\":\"jyothi.raghavaraju@gmail.com\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 20, in validate
+    self.validate_pastorate()
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/non_profit/doctype/member/member.py", line 29, in validate_pastorate
+    frappe.msgprint(_(pastorate))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-12 16:25:27,386 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-12 16:25:27.116686-127.0.0.1-974
+[DEBUG] 2019-01-12 16:25:46,275 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:26:46,425 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:27:46,569 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:28:46,770 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:29:46,935 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:30:47,090 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:31:47,243 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:32:47,429 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:33:47,587 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:34:47,723 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:35:47,902 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:36:48,104 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:37:48,263 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:38:48,414 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:39:48,561 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:40:48,793 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:41:48,970 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:42:49,145 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:43:49,299 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:44:49,509 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:45:49,641 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:46:49,823 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:47:50,003 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:48:50,237 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:49:50,394 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:50:50,548 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:51:50,713 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:52:50,947 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:53:51,119 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:54:51,260 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:55:51,405 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:56:51,612 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:57:51,774 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:58:51,963 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 16:59:52,153 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 17:00:52,425 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-12 17:01:52,599 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local

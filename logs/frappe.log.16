@@ -1,0 +1,1759 @@
+[DEBUG] 2019-01-02 15:28:36,498 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:29:36,724 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:30:37,194 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:31:37,324 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:32:37,560 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:33:37,725 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:34:37,892 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:35:38,075 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:36:38,343 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:37:38,537 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-02 15:38:25,639 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\"}", 
+ "report_name": "Membership Report"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 28, in get_report
+    member = frappe.db.sql("""select * from `tabMember Registration` where docstatus = 1 %s """ % conditions, filters, as_dict=1)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/database/database.py", line 154, in sql
+    self._cursor.execute(query, values)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1241, u'Operand should contain 1 column(s)')
+[ERROR] 2019-01-02 15:38:25,946 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-02 15:38:25.642026-127.0.0.1-178
+[DEBUG] 2019-01-02 15:38:38,691 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:39:38,908 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:40:39,144 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-02 15:40:49,431 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\"}", 
+ "report_name": "Membership Report"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 24, in get_report
+    filters["branch"] = ["Pastorate", "Name of church", "Sub Headquater"].index(filters.branch) + 1
+ValueError: None is not in list
+[ERROR] 2019-01-02 15:40:49,728 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-02 15:40:49.432869-127.0.0.1-3b0
+[DEBUG] 2019-01-02 15:41:39,329 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:42:39,810 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:43:40,016 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:44:40,282 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:45:40,432 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:46:40,598 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:47:40,800 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-02 15:48:11,825 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\"}", 
+ "report_name": "Membership Report"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 25, in get_report
+    filters.update({"month": filters.get("month")[0], "year":filters.get("year")[1], "branch":filters.get("branch")[2]})
+TypeError: 'int' object has no attribute '__getitem__'
+[ERROR] 2019-01-02 15:48:12,118 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-02 15:48:11.827373-127.0.0.1-5ee
+[DEBUG] 2019-01-02 15:48:41,035 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-02 15:49:15,130 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\"}", 
+ "report_name": "Membership Report"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 25, in get_report
+    filters.update({"month": filters.get("month")[0], "year":filters.get("year")[1], "branch":filters.get("branch")})
+TypeError: 'int' object has no attribute '__getitem__'
+[ERROR] 2019-01-02 15:49:15,426 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-02 15:49:15.132195-127.0.0.1-89d
+[DEBUG] 2019-01-02 15:49:41,187 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:50:41,364 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:51:41,543 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:52:41,808 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:53:42,262 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:54:42,447 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:55:42,936 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:56:43,154 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:57:43,641 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:58:43,823 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 15:59:44,011 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:00:44,597 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:01:44,732 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:02:44,930 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:03:45,423 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:04:45,656 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:05:45,821 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:06:45,988 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:07:46,131 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:08:46,369 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:09:46,516 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:10:46,692 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:11:46,857 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:12:47,379 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:13:47,582 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:14:47,747 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:15:47,913 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:16:48,156 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:17:48,332 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:18:48,497 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:19:48,690 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:20:48,930 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:21:49,117 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:22:49,595 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:23:49,784 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:24:50,011 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:25:50,184 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:26:50,379 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:27:50,529 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:28:51,078 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:29:51,243 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:30:51,728 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:31:51,928 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:32:52,178 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:33:52,811 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:34:52,987 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:35:53,165 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:36:53,414 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:37:53,565 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:38:53,751 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:39:53,937 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:40:54,190 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:41:54,374 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:42:54,557 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:43:55,020 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:44:55,247 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:45:55,393 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:46:55,549 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:47:55,719 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:48:55,924 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:49:56,093 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:50:56,282 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:51:56,498 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:52:56,740 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:53:56,928 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:54:57,093 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:55:57,275 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:56:57,502 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:57:57,664 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:58:57,829 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 16:59:57,991 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:00:58,312 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:01:58,473 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:02:58,631 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:03:58,789 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:04:58,994 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:05:59,130 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:06:59,277 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:07:59,409 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:08:59,620 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:09:59,786 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:10:59,944 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:12:00,291 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:13:00,427 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:14:00,591 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:15:00,749 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:16:00,973 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:17:01,127 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:18:01,269 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:19:01,444 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:20:01,673 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:21:01,862 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:22:02,039 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:23:02,208 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:24:02,404 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:25:02,512 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:26:02,663 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:27:02,806 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-02 17:27:29,842 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\"}", 
+ "report_name": "Form C"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 19, in execute
+    count += si
+TypeError: unsupported operand type(s) for +=: 'int' and '_dict'
+[ERROR] 2019-01-02 17:27:30,205 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-02 17:27:29.844643-127.0.0.1-afa
+[DEBUG] 2019-01-02 17:28:02,999 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:29:03,156 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:30:03,298 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:31:03,451 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:32:03,687 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:33:03,851 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:34:04,008 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:35:04,154 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:36:04,454 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:37:04,611 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:38:04,743 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:39:04,913 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:40:05,114 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:41:05,243 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:42:05,365 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:43:05,501 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:44:05,734 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:45:05,889 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:46:06,010 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:47:06,137 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:48:06,320 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:49:06,441 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:50:06,560 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:51:06,711 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:52:06,926 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:53:07,045 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:54:07,167 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:55:07,301 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:56:07,491 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:57:07,605 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-02 17:58:04,574 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\",\"Branch\":\"Pastorate\"}", 
+ "report_name": "Membership Report"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 26, in get_report
+    member = frappe.db.sql("""select * from `tabMember Registration` where docstatus = 1 %s """ % conditions, filters, as_dict=1)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/database/database.py", line 154, in sql
+    self._cursor.execute(query, values)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 168, in execute
+    query = self.mogrify(query, args)
+  File "/home/jyothi/church-bench/env/local/lib/python2.7/site-packages/pymysql/cursors.py", line 147, in mogrify
+    query = query % self._escape_args(args, conn)
+KeyError: 'branch'
+[ERROR] 2019-01-02 17:58:05,012 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-02 17:58:04.576528-127.0.0.1-b8b
+[DEBUG] 2019-01-02 17:58:07,775 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 17:59:07,908 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:00:08,200 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:01:08,326 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:02:08,452 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:03:08,594 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:04:08,771 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:05:08,944 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:06:09,073 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:07:09,188 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:08:09,413 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:09:09,544 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:10:09,666 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:11:09,803 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:12:10,033 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:13:10,179 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:14:10,317 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:15:10,439 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:16:10,652 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:17:10,777 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:18:10,899 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:19:11,036 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:20:11,255 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:21:11,390 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:22:11,548 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:23:11,717 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:24:12,007 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:25:12,469 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:26:12,934 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:27:13,105 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:28:13,347 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:29:13,564 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:30:14,018 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:31:14,158 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:32:14,743 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:33:14,927 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:34:15,060 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:35:15,210 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:36:15,437 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:37:16,127 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:38:16,648 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:39:16,942 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:40:17,157 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:41:17,311 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:42:17,488 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:43:17,670 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:44:17,977 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:45:18,150 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:46:18,300 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:47:18,526 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:48:18,720 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:49:18,868 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:50:19,066 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:51:19,252 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:52:19,499 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:53:19,646 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:54:19,816 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:55:19,982 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:56:20,217 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:57:20,392 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:58:20,525 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 18:59:20,683 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:00:21,004 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:01:21,189 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:02:21,353 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:03:21,516 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:04:21,764 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:05:21,907 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:06:22,073 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:07:22,258 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:08:22,501 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:09:22,665 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:10:22,818 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:11:22,996 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:12:23,252 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:13:23,422 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:14:23,607 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:15:23,767 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:16:24,017 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:17:24,213 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:18:24,368 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:19:24,525 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:20:24,775 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:21:24,969 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:22:25,131 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:23:25,308 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:24:25,535 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:25:25,737 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:26:25,920 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:27:26,059 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:28:26,287 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:29:26,450 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:30:26,610 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:31:26,762 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:32:26,985 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:33:27,153 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:34:27,364 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:35:27,555 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:36:27,823 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:37:28,004 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:38:28,153 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:39:28,345 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-02 19:40:28,625 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:25:04,247 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:26:04,448 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:27:04,615 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:28:04,793 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:30:18,677 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:31:18,812 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:32:19,037 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:33:19,187 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:34:19,319 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:35:19,563 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:36:19,802 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:37:19,960 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:38:20,108 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:39:20,255 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:40:20,480 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:41:20,660 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:42:20,821 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:43:20,976 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:44:21,186 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:45:21,350 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:46:21,538 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:47:21,697 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-03 11:47:48,084 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"from_date\":\"2018-12-03\",\"to_date\":\"2019-01-03\"}", 
+ "report_name": "Membership Report"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 25, in get_report
+    conditions, filters = get_conditions(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 40, in get_conditions
+    if filters.get("from_date"): conditions += " and membership_date>= %(from_date)s"
+UnboundLocalError: local variable 'conditions' referenced before assignment
+[ERROR] 2019-01-03 11:47:48,332 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"from_date\":\"2018-12-03\",\"to_date\":\"2019-01-03\"}", 
+ "report_name": "Membership Report"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 25, in get_report
+    conditions, filters = get_conditions(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/membership_report/membership_report.py", line 40, in get_conditions
+    if filters.get("from_date"): conditions += " and membership_date>= %(from_date)s"
+UnboundLocalError: local variable 'conditions' referenced before assignment
+[ERROR] 2019-01-03 11:47:48,661 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 11:47:48.334783-127.0.0.1-b9f
+[ERROR] 2019-01-03 11:47:48,664 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 11:47:48.106742-127.0.0.1-3a9
+[DEBUG] 2019-01-03 11:48:21,906 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:49:22,040 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:50:22,191 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:51:22,358 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:52:22,564 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:53:22,710 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:54:22,886 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:55:23,042 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:56:23,265 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:57:23,473 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:58:23,624 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 11:59:23,768 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:00:24,065 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:01:24,233 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:02:24,381 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:03:24,571 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:04:24,789 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:05:24,926 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:06:25,057 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:07:25,228 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:08:25,452 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:09:25,637 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:10:25,794 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:11:25,966 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:12:26,184 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:13:26,351 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:14:26,516 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:15:26,685 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:16:26,879 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:17:27,029 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:18:27,181 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:19:27,350 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:20:27,627 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:21:27,793 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:22:27,967 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:23:28,134 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:24:28,364 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:25:28,512 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:26:28,672 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:27:28,828 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:28:29,080 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:29:29,238 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:30:29,372 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:31:29,520 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:32:29,712 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:33:29,874 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:34:30,020 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:35:30,166 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:36:30,373 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:37:30,538 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:38:30,727 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:39:30,865 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:40:31,067 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:41:31,226 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:42:31,394 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:43:31,583 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:44:31,780 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:45:31,957 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:46:32,117 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:47:32,288 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:48:32,562 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:49:32,704 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:50:32,871 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:51:33,050 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:52:33,311 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:53:33,506 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:54:33,711 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:55:33,886 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:56:34,109 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:57:34,263 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:58:34,502 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 12:59:34,672 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:00:34,946 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:01:35,124 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:02:35,292 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:03:35,482 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:04:35,725 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:05:35,896 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:06:36,082 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:07:36,251 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:08:36,485 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:09:36,674 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:10:36,860 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:11:37,362 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:12:37,590 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-03 13:13:16,508 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\"}", 
+ "report_name": "Form C"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 28, in get_report
+    frappe.msgprint(_(member))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-03 13:13:16,772 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:13:16.510370-127.0.0.1-8e0
+[DEBUG] 2019-01-03 13:13:37,789 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:14:37,975 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-03 13:15:32,791 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\"}", 
+ "report_name": "Form C"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 31, in get_report
+    frappe.msgprint(_(member))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-03 13:15:33,083 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:15:32.792599-127.0.0.1-50b
+[DEBUG] 2019-01-03 13:15:38,146 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:16:38,390 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-03 13:16:56,408 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\"}", 
+ "report_name": "Form C"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 31, in get_report
+    frappe.msgprint(_(member))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-03 13:16:56,705 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:16:56.409636-127.0.0.1-f97
+[DEBUG] 2019-01-03 13:17:38,543 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-03 13:17:58,835 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\"}", 
+ "report_name": "Form C"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 31, in get_report
+    frappe.msgprint(_(member[0]))
+TypeError: 'int' object has no attribute '__getitem__'
+[ERROR] 2019-01-03 13:17:59,120 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:17:58.836551-127.0.0.1-748
+[DEBUG] 2019-01-03 13:18:38,704 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-03 13:18:56,836 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\"}", 
+ "report_name": "Form C"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 31, in get_report
+    frappe.msgprint(_(member[1]))
+TypeError: 'int' object has no attribute '__getitem__'
+[ERROR] 2019-01-03 13:18:57,164 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:18:56.838627-127.0.0.1-afb
+[DEBUG] 2019-01-03 13:19:38,885 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-03 13:20:35,136 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "cmd": "frappe.desk.query_report.run", 
+ "filters": "{\"month\":\"Jan\",\"year\":\"2019\"}", 
+ "report_name": "Form C"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 495, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 178, in run
+    result = generate_report_result(report, filters, user)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/query_report.py", line 65, in generate_report_result
+    res = frappe.get_attr(method_name)(frappe._dict(filters))
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 11, in execute
+    report = get_report(filters)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/report/form_c/form_c.py", line 31, in get_report
+    frappe.msgprint(_(member))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-03 13:20:35,481 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:20:35.137767-127.0.0.1-89e
+[DEBUG] 2019-01-03 13:20:39,121 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:21:39,317 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:22:39,506 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:23:39,669 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:24:39,894 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:25:40,361 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:26:40,542 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:27:41,098 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:28:41,303 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:29:41,482 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:30:41,640 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-03 13:30:56,832 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member Registration\",\"name\":\"New Member Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"gender\":\"male\",\"marrital_status\":\"Married\",\"first_name\":\"Jessy\",\"last_name\":\"K\",\"address\":\"chhdd\",\"date_of_birth\":\"1990-08-22\",\"branch\":\"Sub Headquater\",\"date_of_salvation\":\"2019-01-01\",\"membership_date\":\"2019-01-01\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/doctype/member_registration/member_registration.py", line 12, in validate
+    frappe.msgprint(_(member))
+NameError: global name '_' is not defined
+[ERROR] 2019-01-03 13:30:57,101 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:30:56.834582-127.0.0.1-bf7
+[DEBUG] 2019-01-03 13:31:42,107 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[ERROR] 2019-01-03 13:32:03,972 | /home/jyothi/church-bench/apps/frappe/frappe/app.py:
+Site: churchsite.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"docstatus\":0,\"doctype\":\"Member Registration\",\"name\":\"New Member Registration 1\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"gender\":\"male\",\"marrital_status\":\"Married\",\"first_name\":\"Jessy\",\"last_name\":\"K\",\"address\":\"chhdd\",\"date_of_birth\":\"1990-08-22\",\"branch\":\"Sub Headquater\",\"date_of_salvation\":\"2019-01-01\",\"membership_date\":\"2019-01-01\"}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/app.py", line 55, in application
+    response = frappe.handler.handle()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 20, in handle
+    data = execute_cmd(cmd)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/handler.py", line 55, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 1013, in call
+    return fn(*args, **newargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 259, in save
+    return self._save(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 282, in _save
+    self.insert()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 221, in insert
+    self.run_before_save_methods()
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 885, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 780, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1058, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 1041, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/model/document.py", line 774, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/jyothi/church-bench/apps/erpnext/erpnext/hr/doctype/member_registration/member_registration.py", line 14, in validate
+    frappe.msgprint(_(member))
+  File "/home/jyothi/church-bench/apps/frappe/frappe/__init__.py", line 58, in _
+    if is_html(msg):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/data.py", line 571, in is_html
+    return re.search('<[^>]+>', text)
+  File "/home/jyothi/church-bench/env/lib/python2.7/re.py", line 142, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or buffer
+[ERROR] 2019-01-03 13:32:04,670 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-03 13:32:03.975273-127.0.0.1-c9c
+[DEBUG] 2019-01-03 13:32:42,613 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:33:42,804 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:34:43,006 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:35:43,173 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:36:43,455 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:37:43,634 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:38:43,805 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:39:43,960 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:40:44,194 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:41:44,370 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:42:44,533 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:43:44,691 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:44:44,934 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:45:45,102 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:46:45,301 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:47:45,476 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:48:45,715 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:49:45,885 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:50:46,355 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:51:46,559 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:52:46,813 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:53:46,986 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local
+[DEBUG] 2019-01-03 13:54:47,153 | /home/jyothi/church-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: churchsite.local
+Queued events for site churchsite.local

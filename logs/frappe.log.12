@@ -1,0 +1,50 @@
+[ERROR] 2019-01-05 13:57:07,937 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: list index out of range
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/error.py", line 37, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/error.py", line 74, in get_snapshot
+    records = inspect.getinnerframes(etb, 5)
+  File "/usr/lib/python2.7/inspect.py", line 1044, in getinnerframes
+    framelist.append((tb.tb_frame,) + getframeinfo(tb, context))
+  File "/usr/lib/python2.7/inspect.py", line 1008, in getframeinfo
+    lines, lnum = findsource(frame)
+  File "/usr/lib/python2.7/inspect.py", line 580, in findsource
+    if pat.match(lines[lnum]): break
+IndexError: list index out of range
+[ERROR] 2019-01-05 14:20:38,320 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+Could not take error snapshot: list index out of range
+Traceback (most recent call last):
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/error.py", line 37, in make_error_snapshot
+    snapshot = get_snapshot(exception)
+  File "/home/jyothi/church-bench/apps/frappe/frappe/utils/error.py", line 74, in get_snapshot
+    records = inspect.getinnerframes(etb, 5)
+  File "/usr/lib/python2.7/inspect.py", line 1044, in getinnerframes
+    framelist.append((tb.tb_frame,) + getframeinfo(tb, context))
+  File "/usr/lib/python2.7/inspect.py", line 1008, in getframeinfo
+    lines, lnum = findsource(frame)
+  File "/usr/lib/python2.7/inspect.py", line 580, in findsource
+    if pat.match(lines[lnum]): break
+IndexError: list index out of range
+[ERROR] 2019-01-05 14:31:20,168 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-05 14:31:20.148521-127.0.0.1-94c
+[ERROR] 2019-01-05 14:31:20,436 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-05 14:31:20.427191-127.0.0.1-933
+[ERROR] 2019-01-05 14:32:25,483 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-05 14:32:25.474219-127.0.0.1-aac
+[ERROR] 2019-01-05 14:32:25,783 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-05 14:32:25.770609-127.0.0.1-e2b
+[ERROR] 2019-01-05 14:33:15,891 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-05 14:33:15.882564-127.0.0.1-6aa
+[ERROR] 2019-01-05 14:33:16,190 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-05 14:33:16.177999-127.0.0.1-8bb
+[ERROR] 2019-01-05 14:34:52,453 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-05 14:34:52.444448-127.0.0.1-61f
+[ERROR] 2019-01-05 14:43:26,204 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-05 14:43:26.195661-127.0.0.1-1e3
+[ERROR] 2019-01-05 14:43:26,496 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-05 14:43:26.486405-127.0.0.1-1de
+[ERROR] 2019-01-05 14:44:39,371 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-05 14:44:39.362365-127.0.0.1-521
+[ERROR] 2019-01-05 14:44:39,672 | /home/jyothi/church-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2019-01-05 14:44:39.662286-127.0.0.1-504

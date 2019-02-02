@@ -1,0 +1,16 @@
+2018-12-28 18:37:57,439 INFO getting app erpnext
+2018-12-28 18:37:57,448 INFO git clone https://github.com/frappe/erpnext   --origin upstream
+2018-12-28 19:21:40,879 INFO installing erpnext
+2018-12-28 19:21:40,879 INFO ./env/bin/pip install -q  -e ./apps/erpnext 
+2018-12-28 19:22:27,661 INFO getting app foundation
+2018-12-28 19:22:27,812 INFO git clone https://github.com/erpnext/foundation --branch master  --origin upstream
+2018-12-28 19:32:56,137 INFO installing foundation
+2018-12-28 19:32:56,137 INFO ./env/bin/pip install -q  -e ./apps/foundation 
+2019-01-03 11:27:54,976 INFO updating bench
+2019-01-03 11:27:55,002 INFO git pull
+2019-01-03 11:28:17,741 INFO ./env/bin/pip install Pillow
+2019-01-05 14:57:48,622 INFO updating bench
+2019-01-05 14:57:48,629 INFO git pull
+2019-01-05 14:58:21,441 INFO ./env/bin/pip install Pillow
+2019-01-05 18:43:05,450 INFO getting app jquery-qrcode
+2019-01-05 18:43:05,486 INFO git clone https://github.com/jeromeetienne/jquery-qrcode.git   --origin upstream
